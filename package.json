@@ -1,0 +1,18 @@
+{
+  "name": "js-op-june",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "esbuild src/index.js --bundle --outfile=dist/bundle.js --minify",
+    "start": "node dist/bundle.js",
+    "clean": "rm -rf dist node_modules",
+    "rebuild": "npm run clean && npm install && npm run build"
+  },
+  "devDependencies": {
+    "esbuild": "^0.19.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
