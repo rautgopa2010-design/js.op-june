@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  font-family: 'Inter', sans-serif;
+  --brand-primary: #0f4c81;
+  --brand-secondary: #2ecc71;
+  --brand-accent: #f39c12;
+  --surface: rgba(255, 255, 255, 0.78);
+  --surface-strong: rgba(255, 255, 255, 0.96);
+  --surface-border: rgba(15, 76, 129, 0.12);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply min-h-screen bg-[#eef5ff] text-slate-900 antialiased;
+  font-family: 'Inter', sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(15, 76, 129, 0.16);
+  color: #0f4c81;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 28px 80px rgba(15, 76, 129, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+}
+
+.gradient-ring {
+  background: radial-gradient(circle at top left, rgba(46, 204, 113, 0.3), transparent 30%), radial-gradient(circle at top right, rgba(243, 156, 18, 0.28), transparent 26%), radial-gradient(circle at bottom, rgba(15, 76, 129, 0.18), transparent 30%);
+}
+
+::placeholder {
+  color: rgba(15, 76, 129, 0.45);
+}
+
+@layer utilities {
+  .text-brand {
+    color: var(--brand-primary);
+  }
+  .bg-brand-soft {
+    background: rgba(15, 76, 129, 0.08);
+  }
+}
